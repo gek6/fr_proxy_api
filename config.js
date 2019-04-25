@@ -1,9 +1,12 @@
-//代理配置
+﻿//代理配置
 let conifg = {
-    '/api/':{
-        target: 'http://bayin.mycwgs.com',
+    '/api/': {
+        target: 'http://bayin888.mycwgs.com',
     },
-    '/osm/':{
+    '/home/': {
+        target: 'http://bayin888.mycwgs.com',
+    },
+    '/osm/': {
         target: 'http://120.79.90.199:80',
     }
 }

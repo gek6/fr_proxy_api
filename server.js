@@ -41,6 +41,10 @@ function proxy( opt,res ,req){
     var proxyRequest = http.request(opt, function(proxyResponse) { //代理请求获取的数据再返回给本地res
     	// 允许 本地访问 跨域
         res.setHeader('Access-Control-Allow-Origin', '*');
+        //跨域允许的请求方式 
+        res.setHeader("Access-Control-Allow-Methods","*");
+       //允许的header类型
+        res.setHeader("Access-Control-Allow-Headers","*");
         proxyResponse.on('data', function(chunk) {
             console.log( chunk.toString('utf-8') )
             res.write(chunk, 'binary');
